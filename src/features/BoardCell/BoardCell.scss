@@ -1,0 +1,13 @@
+.board-cell {
+  width: 30px;
+  height: 30px;
+
+  &_theme {
+    &_dark {
+      background-color: black;
+    }
+    &_light {
+      background-color: wheat;
+    }
+  }
+}
