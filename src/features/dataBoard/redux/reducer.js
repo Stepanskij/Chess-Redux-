@@ -3,10 +3,10 @@ import { initState } from "./init";
 
 export const reducer = (state = initState, action) => {
   switch (action.type) {
-    case actionTypes.SWITCH_THEME: {
+    case actionTypes.CHANGE_BOARD: {
       return {
         ...state,
-        theme: action.payload,
+        cells: action.payload,
       };
     }
 

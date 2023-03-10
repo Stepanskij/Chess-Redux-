@@ -1,6 +1,8 @@
 import React from "react";
 import block from "bem-cn";
 
+import Figure from "features/Figure";
+
 import "./BoardCell.scss";
 
 const b = block("board-cell");
@@ -10,23 +12,21 @@ const BoardCell = (props) => {
   const n1 = splitId[0];
   const n2 = splitId[1];
 
-  let cell;
+  let theme;
 
   if (n1 % 2) {
-    if (n2 % 2) {
-      cell = <div className={b({ theme: "dark" })} {...props}></div>;
-    } else {
-      cell = <div className={b({ theme: "light" })} {...props}></div>;
-    }
+    if (n2 % 2) theme = "dark";
+    else theme = "light";
   } else {
-    if (!(n2 % 2)) {
-      cell = <div className={b({ theme: "dark" })} {...props}></div>;
-    } else {
-      cell = <div className={b({ theme: "light" })} {...props}></div>;
-    }
+    if (!(n2 % 2)) theme = "dark";
+    else theme = "light";
   }
 
-  return cell;
+  return (
+    <div className={b({ theme: theme })} {...props}>
+      <Figure figureType={props.figureType} />
+    </div>
+  );
 };
 
 export default BoardCell;

@@ -1,10 +1,10 @@
 import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
-import { reducer as appReducer } from "features/app/redux/reducer";
+import { reducer as dataBoardReducer } from "features/dataBoard/redux/reducer";
 
 const reducer = combineReducers({
-  app: appReducer,
+  dataBoard: dataBoardReducer,
 });
 
 const middlewares = [thunk.withExtraArgument(/* extraData */)];
