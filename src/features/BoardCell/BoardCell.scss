@@ -1,9 +1,11 @@
 .board-cell {
-  width: 30px;
-  height: 30px;
+  min-width: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding: 0 0 100% 0;
 
   &_theme {
     &_dark {
@@ -12,5 +14,16 @@
     &_light {
       background-color: wheat;
     }
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
   }
 }

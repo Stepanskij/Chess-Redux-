@@ -1,9 +1,22 @@
 import { actionTypes } from "./types";
 
-export const changeBoard = () => {
+export const changeCell = (idCell) => {
   return async (dispatch, state, extra) => {
-    /* const value = state().app.theme === "dark" ? "light" : "dark"; */
+    const cells = { ...state().dataBoard.cells };
 
-    dispatch(/* { type: actionTypes.SWITCH_THEME, payload: value } */);
+    dispatch({
+      type: actionTypes.CHANGE_CELL,
+      payload: cells,
+    });
+  };
+};
+
+export const moveFigure = (idCell) => {
+  return async (dispatch, state, extra) => {
+    const moveArg = state().dataBoard.moveArg;
+    console.log(moveArg);
+    dispatch({
+      type: actionTypes.MOVE_FIGURE,
+    });
   };
 };
