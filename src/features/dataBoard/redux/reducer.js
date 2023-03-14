@@ -3,7 +3,7 @@ import { initState } from "./init";
 
 export const reducer = (state = initState, action) => {
   switch (action.type) {
-    case actionTypes.CHANGE_CELL: {
+    case actionTypes.CHANGE_CELLS: {
       return {
         ...state,
         cells: action.payload,
@@ -13,6 +13,8 @@ export const reducer = (state = initState, action) => {
     case actionTypes.MOVE_FIGURE: {
       return {
         ...state,
+        moveCells: action.payload,
+        moveCells: [],
       };
     }
 

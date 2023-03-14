@@ -7,12 +7,15 @@
   position: relative;
   padding: 0 0 100% 0;
 
-  &_theme {
-    &_dark {
+  &_side {
+    &_black {
       background-color: black;
     }
-    &_light {
+    &_white {
       background-color: wheat;
+    }
+    &_red {
+      background-color: red;
     }
   }
 
