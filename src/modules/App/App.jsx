@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import Modal from "modules/Modal";
 import UiKit from "modules/UiKit";
 
-import Board from "features/dataBoard/view/Board";
+import Board from "features/board/view/Board";
 
 import "./App.scss";
 

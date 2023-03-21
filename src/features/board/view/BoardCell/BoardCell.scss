@@ -7,16 +7,25 @@
   position: relative;
   padding: 0 0 100% 0;
 
-  &_side {
+  &_color {
     &_black {
       background-color: black;
     }
     &_white {
       background-color: wheat;
     }
-    &_red {
-      background-color: red;
-    }
+  }
+
+  &_selected {
+    box-shadow: inset 0px 0px 20px 10px rgb(6, 111, 197);
+  }
+
+  &_free-move-cell {
+    box-shadow: inset 0px 0px 20px 10px green;
+  }
+
+  &_attack-move-cell {
+    box-shadow: inset 0px 0px 20px 10px rgb(167, 4, 4);
   }
 
   &__container {
