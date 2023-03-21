@@ -3,6 +3,14 @@ import { initState } from "./init";
 
 export const reducer = (state = initState, action) => {
   switch (action.type) {
+    case actionTypes.SELECT_FIGURE: {
+      return {
+        ...state,
+        cells: action.payload.cells,
+        possibleMovesCells: action.payload.possibleMovesCells,
+      };
+    }
+
     case actionTypes.MOVE_FIGURE: {
       return {
         ...state,
@@ -11,11 +19,10 @@ export const reducer = (state = initState, action) => {
       };
     }
 
-    case actionTypes.SELECT_FIGURE: {
+    case actionTypes.COUNT_MOVE: {
       return {
         ...state,
-        cells: action.payload.cells,
-        possibleMovesCells: action.payload.possibleMovesCells,
+        counterOfMove: action.payload,
       };
     }
 

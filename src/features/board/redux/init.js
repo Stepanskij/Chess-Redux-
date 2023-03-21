@@ -144,4 +144,5 @@ export const initState = {
     }),
   },
   possibleMovesCells: [],
+  counterOfMove: 1,
 };
