@@ -6,6 +6,7 @@ import Modal from "modules/Modal";
 import UiKit from "modules/UiKit";
 
 import Board from "features/board/view/Board";
+import Menu from "features/board/view/Menu/Menu";
 
 import "./App.scss";
 
@@ -20,6 +21,7 @@ const App = (props) => {
         </Route>
         <Route path="/main">
           <Board />
+          <Menu />
         </Route>
         <Route path="/uikit">
           <UiKit />

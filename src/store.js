@@ -2,9 +2,11 @@ import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 import { reducer as boardReducer } from "features/board/redux/reducer";
+import { reducer as gameReducer } from "features/game/redux/reducer";
 
 const reducer = combineReducers({
   board: boardReducer,
+  game: gameReducer,
 });
 
 const middlewares = [thunk.withExtraArgument(/* extraData */)];

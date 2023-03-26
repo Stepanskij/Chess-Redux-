@@ -26,6 +26,13 @@ export const reducer = (state = initState, action) => {
       };
     }
 
+    case actionTypes.RESTART_GAME: {
+      return {
+        ...state,
+        ...action.payload,
+      };
+    }
+
     default: {
       return state;
     }
